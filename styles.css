@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Euclid Circular A", Poppins;
+    color: #f9f9f9;
+  }
+  
+  button {
+    border: 0;
+    padding: 0;
+    /* background: transparent; */
+    cursor: pointer;
+  }
+  
+
+/* .burger,
+.menu,
+.background {
+    position: fixed;
+    background-repeat: no-repeat;
+} */
+
+.menu,
+.menu a,
+.background {
+    transition: 0.5s;
+}
+
+.burger {
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 88px;
+    height: 88px;
+    /* background-image:  */
+    /* url("#"); */
+    border: 0;
+    padding: 0;
+    /* background: transparent; */
+    cursor: pointer;
+}
+
+.background {
+    z-index: 1;
+    top: -10%;
+    left:  -10%;
+    width: 120%;
+    height: 120%;
+    /* background-image: 
+    url("#"); */
+    /* background-size: cover;
+    background-position: 80%; */
+}
+
+.menu {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    /* background: 
+    rgba(0, 0, 0, 0.6);
+    opacity: 0; */
+    /* visibility: hidden; */
+}
+
+.menu nav:hover a {
+opacity: 0.25;
+}
+
+.menu nav:hover  {
+    opacity: 1;
+    }
