@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap');
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* height: 100%; */
+}
 
+.content {
+  flex: 1;
+}
+.border-blue {
+  border-color: #5c908a;
+}
 
 
 /* .fa-facebook-f {
