@@ -44,9 +44,8 @@
         <ul
           class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li>
-            <a href="./"
-              class="block py-2 pl-3 pr-4 text-white bg-[#6b564b] rounded md:bg-transparent md:text-yellow-500 md:p-0 dark:text-white md:dark:text-yellow-500 hover:text-white"
-              aria-current="page">Home</a>
+            <a href="/index.html"
+              class="block py-2 pl-3 pr-4 text-white rounded hover:text-yellow-600 hover:bg-yellow-200 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
           </li>
 
 
@@ -74,96 +73,62 @@
 
   </nav>
 
+
+
   <form onsubmit="submitForm(event)">
     <div class="mb-6">
-      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+      <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white">Email</label>
       <input type="email" id="email" name="emailAddress"
-        class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+        class="shadow-sm bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
         placeholder="Enter email address" aria-label="Email address" title="Email address" required>
     </div>
     <div class="mb-6">
-      <label for="artType" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">What type of art are you
-        looking to commission?</label>
-      <textarea id="artType" name="entry.634299123" placeholder="Enter some text..." aria-label="Art type"
+      <label for="nome" class="block mb-2 text-sm font-medium text-white dark:text-white">Nome</label>
+      <input type="text" name="entry.2005620554" value="" id="nome" dir="auto" aria-label="Nome" aria-required="true"
+        title="">
+    </div>
+    <div class="mb-6">
+      <label for="telefono" class="block mb-2 text-sm font-medium text-white dark:text-white">Telefono</label>
+      <input type="text" name="entry.1166974658" value="" id="telefono" dir="auto" aria-label="Numero di telefono  "
+        title="">
+    </div>
+
+    <div class="mb-6">
+      <label for="commento" class="block mb-2 text-sm font-medium text-white dark:text-white">Messaggio</label>
+      <textarea id="commento" name="entry.839337160" placeholder="Enter some text..." aria-label="Art type"
         title="Art type" required
         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></textarea>
     </div>
     <button type="submit"
-      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send
-      message</button>
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Invia
+      </button>
   </form>
 
-  <script>
-    function submitForm(event) {
-
-      event.preventDefault();
-
-      const email = document.getElementById('email').value;
-      const artTypeMessage = document.getElementById('artType').value;
-
-      // Set the ID of your Google Form, go to your google form and click send, get the link option and copy the code that exists where ${formId} is:
-      //https://docs.google.com/forms/d/e/${formId}/viewform?usp=sf_link
-
-      const formId = '';
-
-      // Construct the URL of your Google Form with the form ID included
-      const url = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
-
-      // Create a new URLSearchParams object to encode the form data
-      const data = new URLSearchParams();
-
-      // Add the form data to the URLSearchParams object using the entry. fields
-      // Alternatively, you can add the form data using the name attributes of each field
-
-      // To get these fieldnames you can request an email version of your google form and inspect the input elements to find the name instead such as name="emailAddress" or name='entry.634299123'.
+  <div class="absolute bottom-20 flex justify-center text-white w-full pb-4">
+    <a href="#" class="fa-brands fa-facebook-f text-3xl mx-5"></a>
+    <a href="#" class="fa-brands fa-instagram text-3xl mx-5"></a>
+    <a href="#" class="fa-brands fa-tiktok text-3xl mx-5"></a>
+  </div>
 
 
-      data.append('emailAddress', email);
-      data.append('entry.634299123', artTypeMessage);
-
-      // Do something with the email and message data
-
-      // Send a POST request to the specified URL with the form data in the request body
-      fetch(url, {
-        method: 'POST',
-        mode: 'no-cors', // Use no-cors mode to bypass CORS policy
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: data,
-      })
-        .then((response) => {
-          // Log the response status code to the console
-          console.log(response.status);
-        })
-        .catch((error) => {
-          // Log any errors to the console
-          console.error(error);
-        });
-    }
-
-
-
-
-  </script>
 
   <!-- footer -->
-  <footer class="footer footer-center w-full p-5 bg-gray-300 text-white" style="background-color: #5c908a;">
+  <footer class="fixed bottom-0 w-full p-5 bg-gray-300 text-white" style="background-color: #5c908a;">
     <div class="text-center">
       <p>
         © 2022 -
         <a class="font-semibold" href="#">Into The Woods</a>
       </p>
+
     </div>
   </footer>
 
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
-
-
-  <script src="/script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./script.js"></script>
+
 </body>
 
 </html>
