@@ -8,7 +8,14 @@ body {
   /* height: 100%; */
 }
 .main-content {
-  margin-top: 9rem /* adjust this value as needed */
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+}
+.my-pic {
+  width: 50%;
+  height: auto;
+  margin-top: 150px;
+
 }
 
 
