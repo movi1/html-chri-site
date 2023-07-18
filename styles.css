@@ -43,9 +43,10 @@
  
 }
 body {
+
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; 
 }
 
 main {
@@ -54,6 +55,16 @@ main {
   justify-content: center;
   align-items: center;
 }
-
-
+.text-custom-color {
+  color: #5c908a;
+}
+.bg-custom-color {
+  background-color: #5c908a;
+}
+.border-color {
+  color: #5c908a;
+}
+.hover\:bg-custom-color:hover {
+  background-color: #5c908a;
+}
 
