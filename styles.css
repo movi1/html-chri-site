@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap");
 
 /* body {
   display: flex;
@@ -7,6 +7,79 @@
   min-height: 100vh;
 
 }  */
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.scimmia {
+  position: absolute;
+  top: 60px;
+  right: 70px;
+}
+
+.ocra-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.ocra,
+.green,
+.scimmia {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.green {
+  margin-top: 200px;
+  z-index: 1;
+  left: -10px;
+}
+.ocra,
+.green,
+ .scimmia{
+  animation-name: zoomIn;
+  animation-duration: 4s;
+}
+.ocra {
+  position: absolute;
+  top: 300px;
+  right: 70px;
+  z-index: 2;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.hover\:custom-color:hover {
+ color: #5c908a;
+}
+
+
+#contest-text:hover {
+  text-shadow: 4px 4px 8px black;
+}
+.image-container img {
+  box-shadow: 5px 5px 10px #000;
+}
+
+
+
+#content-text {
+  animation-name: zoomIn;
+  animation-duration: 5s;
+}
 .main-content {
   height: calc(100vh - 150px);
   overflow-y: auto;
@@ -15,7 +88,6 @@
   width: 50%;
   height: auto;
   margin-top: 150px;
-
 }
 .google-form-wrapper {
   display: flex;
@@ -40,13 +112,11 @@
 .image-container {
   background-color: #6b564b;
   background-blend-mode: multiply;
- 
 }
 body {
-
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 main {
@@ -59,7 +129,7 @@ main {
   color: #5c908a;
 }
 .bg-custom-color {
-  background-color: #5c908a;
+  background-color: lightgray;
 }
 .border-color {
   color: #5c908a;
@@ -67,4 +137,9 @@ main {
 .hover\:bg-custom-color:hover {
   background-color: #5c908a;
 }
-
+.insect {
+  min-height: 100vh;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
