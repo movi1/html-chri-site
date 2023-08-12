@@ -104,6 +104,19 @@ function submitForm(event) {
 
 
 
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                clifford: "#da373d",
+            },
+            backgroundImage: {
+                'hero-lion': "url('./images/bg-img.JPG')",
+            }
+        },
+    },
+}
+
 
 
 
